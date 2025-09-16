@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shiora | ETLAS — 来自日本的清真美妆</title>
+  <meta name="description" content="Shiora（ETLAS株式会社）— 日本清真（Halal）美妆与母婴品牌。面膜OEM/ODM、清真认证合规，出口中东等市场。" />
+  <style>
+    :root{
+      --bg:#0f1020;          /* 深色底：夜空感 */
+      --card:#171833;        /* 卡片底 */
+      --text:#f6f7fb;        /* 正文文字 */
+      --muted:#c9cbe1;       /* 次要文字 */
+      --gold:#c9a227;        /* 金色点缀 */
+      --accent1:#7c8eff;     /* 蓝 */
+      --accent2:#ff8bd1;     /* 粉 */
+      --accent3:#b086ff;     /* 紫 */
+      --ok:#2ecc71;          /* 绿色 */
+      --warn:#f39c12;
+      --maxw:1200px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:radial-gradient(1200px 800px at 80% -10%, rgba(124,142,255,.20), transparent),
+                               radial-gradient(1000px 600px at 0% 0%, rgba(176,134,255,.18), transparent),
+                               var(--bg);
+               color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+    a{color:var(--text);text-decoration:none}
+    .container{max-width:var(--maxw);margin:auto;padding:0 20px}
+    header{position:sticky;top:0;background:rgba(15,16,32,.7);backdrop-filter:blur(10px);z-index:50;border-bottom:1px solid rgba(255,255,255,.08)}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:36px;height:36px;border-radius:10px;background:conic-gradient(from 0deg, var(--gold), #ffe9a8, var(--gold));
+          box-shadow:0 0 0 2px rgba(201,162,39,.3), 0 6px 20px rgba(201,162,39,.25)}
+    .brand h1{margin:0;font-size:20px;letter-spacing:.5px}
+    .chip{font-size:12px;color:#080a12;background:linear-gradient(90deg,#ffe9a8,var(--gold));padding:4px 8px;border-radius:999px;margin-left:8px}
+    nav a{opacity:.9;margin:0 10px}
+    nav a:hover{opacity:1}
+    .lang{display:flex;gap:6px}
+    .btn{border:1px solid rgba(255,255,255,.15);padding:8px 12px;border-radius:10px;background:rgba(255,255,255,.04)}
+    .btn:hover{border-color:rgba(255,255,255,.3)}
+    .hero{padding:80px 0}
+    .hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+    .badge{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;background:rgba(46,204,113,.15);border:1px solid rgba(46,204,113,.35);color:#d2ffe3;border-radius:999px;font-size:12px}
+    .title{font-size:44px;line-height:1.15;margin:14px 0 10px}
+    .title .grad{background:linear-gradient(90deg,var(--accent1),var(--accent3),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+    .subtitle{color:var(--muted);max-width:60ch}
+    .cta{display:flex;gap:12px;margin-top:24px}
+    .cta .primary{background:linear-gradient(90deg,var(--accent1),var(--accent3));border:0}
+    .cta .ghost{background:rgba(255,255,255,.06)}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:18px}
+    .ill{height:360px;border-radius:18px;background:
+      radial-gradient(200px 120px at 70% 10%, rgba(255,139,209,.35), transparent),
+      radial-gradient(220px 140px at 20% 80%, rgba(124,142,255,.35), transparent),
+      radial-gradient(180px 100px at 60% 70%, rgba(176,134,255,.30), transparent),
+      linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.02));
+      border:1px dashed rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;color:var(--muted)}
+    section{padding:64px 0;border-top:1px solid rgba(255,255,255,.06)}
+    .grid{display:grid;gap:18px}
+    .grid.cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .grid.cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+    @media (max-width:980px){.hero .wrap{grid-template-columns:1fr}.grid.cols-3{grid-template-columns:1fr}.grid.cols-2{grid-template-columns:1fr}}
+    h2{font-size:28px;margin:0 0 16px}
+    .lead{color:var(--muted)}
+    .pill{font-size:12px;padding:4px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.18);opacity:.85}
+    .gold{color:#ffe9a8}
+    .list{margin:10px 0 0;padding-left:18px}
+    .tag{display:inline-flex;align-items:center;gap:6px;font-size:12px;border:1px solid rgba(255,255,255,.18);padding:4px 8px;border-radius:999px;opacity:.9}
+    .row{display:flex;gap:12px;flex-wrap:wrap}
+    footer{padding:40px 0;color:var(--muted)}
+    .foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.06);padding-top:20px}
+    .mono{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <h1>Shiora<span class="gold">·</span>ETLAS <span class="chip" data-i="brand.badge">日本清真美妆</span></h1>
+      </div>
+      <nav>
+        <a href="#about" data-i="nav.about">关于我们</a>
+        <a href="#products" data-i="nav.products">产品</a>
+        <a href="#oem" data-i="nav.oem">OEM/ODM</a>
+        <a href="#cert" data-i="nav.cert">认证</a>
+        <a href="#contact" data-i="nav.contact">联系</a>
+      </nav>
+      <div class="lang">
+        <button class="btn" onclick="setLang('zh')">简</button>
+        <button class="btn" onclick="setLang('ja')">日</button>
+        <button class="btn" onclick="setLang('en')">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero" id="home">
+      <div class="wrap">
+        <div>
+          <span class="badge">HALAL ✔ <span class="mono">NAHA / BPJPH</span></span>
+          <h2 class="title"><span class="grad" data-i="hero.titleA">来自日本的清真美妆</span><br><span data-i="hero.titleB">做有温度的高端护理</span></h2>
+          <p class="subtitle" data-i="hero.desc">我们专注于符合清真标准的护肤与母婴产品，以日本制造的严谨与美学，服务中东与全球清真市场。</p>
+          <div class="cta">
+            <a href="#products" class="btn primary" data-i="cta.primary">查看产品</a>
+            <a href="#oem" class="btn ghost" data-i="cta.secondary">咨询OEM/ODM</a>
+          </div>
+        </div>
+        <div class="card ill">Drop your logo / hero image here</div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="grid cols-2">
+        <div class="card">
+          <h2 data-i="about.title">品牌与愿景</h2>
+          <p class="lead" data-i="about.lead">Shiora 源自日本，主打“清真 + 高端”的产品哲学：合规、安全、有效、审美在线。</p>
+          <ul class="list">
+            <li data-i="about.li1">聚焦中东与东南亚清真市场</li>
+            <li data-i="about.li2">日本原料 / 日本工艺 / 国际合规</li>
+            <li data-i="about.li3">包装与视觉强调东方雅致（金色点缀、蓝粉紫氛围）</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h2 data-i="about.title2">公司信息</h2>
+          <p class="lead">
+            ETLAS 株式会社（ETLAS Co., Ltd.）<br/>
+            <span data-i="about.addr">日本・大阪</span> ｜ <a href="mailto:mihriban@etlas.jp">mihriban@etlas.jp</a>
+          </p>
+          <div class="row">
+            <span class="pill">GMP</span>
+            <span class="pill">ISO</span>
+            <span class="pill">Halal</span>
+            <span class="pill">Made in Japan*</span>
+          </div>
+          <p class="lead" style="margin-top:8px" data-i="about.note">* 单片包装可在海外生产，内料在日本灌装/复检以满足“日本制造”相关标识规范（依各法域规则具体判定）。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="products">
+      <h2>Products｜产品</h2>
+      <p class="lead" data-i="prod.lead">当前主推清真面膜系列，母婴相关产品按法规推进中。</p>
+      <div class="grid cols-3">
+        <div class="card">
+          <div class="row" style="justify-content:space-between;align-items:center">
+            <strong data-i="prod.m1.name">Shiora Halal 3D 面膜</strong>
+            <span class="tag">HALAL</span>
+          </div>
+          <p class="lead" data-i="prod.m1.desc">3D 立体剪裁贴合，鱼来源胶原 + 玻尿酸 + 弹性蛋白，温和保湿、紧致弹润。</p>
+          <div class="row">
+            <span class="pill">Collagen</span>
+            <span class="pill">Elastin</span>
+            <span class="pill">HA</span>
+          </div>
+        </div>
+        <div class="card">
+          <div class="row" style="justify-content:space-between;align-items:center">
+            <strong data-i="prod.m2.name">Shiora 科学搞笑款（沙特市场定制）</strong>
+            <span class="tag">HALAL</span>
+          </div>
+          <p class="lead" data-i="prod.m2.desc">以“超级胶原 & Q弹弹性”IP 形象打造的趣味包装，提高货架识别与社媒传播力。</p>
+          <div class="row">
+            <span class="pill">Shelf Impact</span>
+            <span class="pill">UGC</span>
+            <span class="pill">KSA</span>
+          </div>
+        </div>
+        <div class="card">
+          <div class="row" style="justify-content:space-between;align-items:center">
+            <strong data-i="prod.f1.name">Shiora Halal 婴儿配方奶粉（0–3月）</strong>
+            <span class="tag" style="border-color:rgba(243,156,18,.5);color:#ffd58f">COMING SOON</span>
+          </div>
+          <p class="lead" data-i="prod.f1.desc">蓝×粉×紫的温柔配色，强调专业与神秘感；严格遵循清真标准与日本质量体系。</p>
+          <div class="row">
+            <span class="pill">900g</span>
+            <span class="pill">Halal</span>
+            <span class="pill">R&D</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="oem">
+      <div class="grid cols-2">
+        <div class="card">
+          <h2 data-i="oem.title">OEM/ODM 能力</h2>
+          <ul class="list">
+            <li data-i="oem.li1">最小起订量参考：3,000 单位起（依品类协商）</li>
+            <li data-i="oem.li2">配方定制：可选鱼胶原/植物替代、香精/无香、敏感肌版本</li>
+            <li data-i="oem.li3">包装定制：金箔烫印、蓝/粉/紫主题、可挂孔单片/精品礼盒</li>
+            <li data-i="oem.li4">认证支持：Halal、GMP、ISO，出口资料齐备</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h2 data-i="oem.flow">开发流程（示例）</h2>
+          <ol class="list">
+            <li data-i="oem.f1">需求沟通 → 目标市场/法规确认</li>
+            <li data-i="oem.f2">配方与包装提案 → 样品打样</li>
+            <li data-i="oem.f3">稳定性/微生物等测试 → 合规审核</li>
+            <li data-i="oem.f4">下单生产 → 日本灌装/复检 → 出厂</li>
+          </ol>
+          <p class="lead" data-i="oem.note">* 可根据沙特、阿联酋、土耳其等地法规及清真标准进行本地化适配。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="cert">
+      <h2 data-i="cert.title">合规与认证</h2>
+      <div class="grid cols-3">
+        <div class="card"><strong>Halal</strong><p class="lead">NAHA / BPJPH 路线支持</p></div>
+        <div class="card"><strong>GMP</strong><p class="lead">良好生产规范体系</p></div>
+        <div class="card"><strong>ISO</strong><p class="lead">质量/环境等标准按需</p></div>
+      </div>
+      <p class="lead" style="margin-top:12px" data-i="cert.note">* 具体证书与标注方式依产品/产线与目标市场法规确定。</p>
+    </section>
+
+    <section id="contact">
+      <div class="grid cols-2">
+        <div class="card">
+          <h2 data-i="contact.title">联系我们</h2>
+          <p class="lead">ETLAS 株式会社（Shiora 品牌）<br>日本・大阪<br>Email：<a href="mailto:mihriban@etlas.jp">mihriban@etlas.jp</a></p>
+          <div class="row">
+            <a class="btn" href="mailto:mihriban@etlas.jp" data-i="contact.cta1">发送邮件</a>
+            <a class="btn" href="#" data-i="contact.cta2">下载产品型录（PDF）</a>
+          </div>
+          <p class="lead" style="margin-top:12px" data-i="contact.legal">© <span id="year"></span> ETLAS Co., Ltd. 保留所有权利。</p>
+        </div>
+        <div class="card">
+          <h2 data-i="contact.quick">快速留言（静态表单示例）</h2>
+          <form onsubmit="event.preventDefault(); alert(t('form.thanks')); this.reset();">
+            <label>
+              <span data-i="form.name">姓名</span><br/>
+              <input required placeholder="Your Name" style="width:100%;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.04);color:var(--text)">
+            </label>
+            <br/><br/>
+            <label>
+              <span>Email</span><br/>
+              <input type="email" required placeholder="you@example.com" style="width:100%;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.04);color:var(--text)">
+            </label>
+            <br/><br/>
+            <label>
+              <span data-i="form.msg">留言</span><br/>
+              <textarea required rows="4" placeholder="Tell us what you need…" style="width:100%;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.04);color:var(--text)"></textarea>
+            </label>
+            <br/>
+            <button class="btn primary" style="width:100%" type="submit" data-i="form.submit">提交</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container">
+    <div class="foot">
+      <div>Shiora · ETLAS</div>
+      <div class="row">
+        <a href="#">Instagram</a>
+        <a href="#">X / Twitter</a>
+        <a href="#">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // 简 / 日 / EN 文案字典（可继续扩展）
+    const I18N = {
+      zh: {
+        'brand.badge':'日本清真美妆',
+        'nav.about':'关于我们','nav.products':'产品','nav.oem':'OEM/ODM','nav.cert':'认证','nav.contact':'联系',
+        'hero.titleA':'来自日本的清真美妆','hero.titleB':'做有温度的高端护理','hero.desc':'我们专注于符合清真标准的护肤与母婴产品，以日本制造的严谨与美学，服务中东与全球清真市场。',
+        'cta.primary':'查看产品','cta.secondary':'咨询OEM/ODM',
+        'about.title':'品牌与愿景','about.lead':'Shiora 源自日本，主打“清真 + 高端”的产品哲学：合规、安全、有效、审美在线。','about.li1':'聚焦中东与东南亚清真市场','about.li2':'日本原料 / 日本工艺 / 国际合规','about.li3':'包装与视觉强调东方雅致（金色点缀、蓝粉紫氛围）',
+        'about.title2':'公司信息','about.addr':'日本・大阪','about.note':'* 单片包装可在海外生产，内料在日本灌装/复检以满足“日本制造”相关标识规范（依各法域规则具体判定）。',
+        'prod.lead':'当前主推清真面膜系列，母婴相关产品按法规推进中。','prod.m1.name':'Shiora Halal 3D 面膜','prod.m1.desc':'3D 立体剪裁贴合，鱼来源胶原 + 玻尿酸 + 弹性蛋白，温和保湿、紧致弹润。','prod.m2.name':'Shiora 科学搞笑款（沙特市场定制）','prod.m2.desc':'以“超级胶原 & Q弹弹性”IP 形象打造的趣味包装，提高货架识别与社媒传播力。','prod.f1.name':'Shiora Halal 婴儿配方奶粉（0–3月）','prod.f1.desc':'蓝×粉×紫的温柔配色，强调专业与神秘感；严格遵循清真标准与日本质量体系。',
+        'oem.title':'OEM/ODM 能力','oem.li1':'最小起订量参考：3,000 单位起（依品类协商）','oem.li2':'配方定制：可选鱼胶原/植物替代、香精/无香、敏感肌版本','oem.li3':'包装定制：金箔烫印、蓝/粉/紫主题、可挂孔单片/精品礼盒','oem.li4':'认证支持：Halal、GMP、ISO，出口资料齐备','oem.flow':'开发流程（示例）','oem.f1':'需求沟通 → 目标市场/法规确认','oem.f2':'配方与包装提案 → 样品打样','oem.f3':'稳定性/微生物等测试 → 合规审核','oem.f4':'下单生产 → 日本灌装/复检 → 出厂','oem.note':'* 可根据沙特、阿联酋、土耳其等地法规及清真标准进行本地化适配。',
+        'cert.title':'合规与认证','cert.note':'* 具体证书与标注方式依产品/产线与目标市场法规确定。',
+        'contact.title':'联系我们','contact.cta1':'发送邮件','contact.cta2':'下载产品型录（PDF）','contact.legal':'© {year} ETLAS Co., Ltd. 保留所有权利。','contact.quick':'快速留言（静态表单示例）',
+        'form.name':'姓名','form.msg':'留言','form.submit':'提交','form.thanks':'感谢留言！我们会尽快联系您。'
+      },
+      ja: {
+        'brand.badge':'日本発・ハラールビューティー',
+        'nav.about':'私たちについて','nav.products':'製品','nav.oem':'OEM/ODM','nav.cert':'認証','nav.contact':'お問い合わせ',
+        'hero.titleA':'日本からのハラール・ビューティー','hero.titleB':'心地よさと上質を、毎日に','hero.desc':'ハラール基準に準拠したスキンケア／母子向け製品を、日本の品質と美意識で。中東を中心にグローバル市場へ届けます。',
+        'cta.primary':'製品を見る','cta.secondary':'OEM/ODM相談',
+        'about.title':'ブランド＆ビジョン','about.lead':'Shiora は「ハラール × プレミアム」。安全・有効性・審美性を兼ね備えます。','about.li1':'中東／東南アジアのハラール市場に注力','about.li2':'日本原料・日本のものづくり・国際規格準拠','about.li3':'金箔アクセント、ブルー/ピンク/パープルの上品な世界観',
+        'about.title2':'会社情報','about.addr':'日本・大阪','about.note':'* 個包装は海外製造でも、日本での充填・再検査で表示要件を満たす運用に対応（法域により要確認）。',
+        'prod.lead':'現在はハラール対応フェイスマスクが主力。乳児用粉ミルクは規制に沿って順次展開予定。','prod.m1.name':'Shiora ハラール 3D マスク','prod.m1.desc':'立体フィット。フィッシュコラーゲン＋ヒアルロン酸＋エラスチンで保湿＆ハリ感。','prod.m2.name':'Shiora サイエンス＆ユーモア版（KSA向け）','prod.m2.desc':'ヒーロー風IPで棚前訴求とSNS拡散力を強化。','prod.f1.name':'Shiora ハラール粉ミルク（0–3ヶ月）','prod.f1.desc':'ブルー×ピンク×パープルの柔らかい配色で専門性と神秘性を両立。',
+        'oem.title':'OEM/ODM 提供能力','oem.li1':'最小ロット目安：3,000〜（製品により応相談）','oem.li2':'処方カスタム：フィッシュ由来／植物代替、香料有無、敏感肌向け','oem.li3':'パッケージ：金箔、吊り下げ対応、ギフト箱など','oem.li4':'認証：Halal/GMP/ISO、輸出ドキュメント支援',
+        'oem.flow':'開発フロー（例）','oem.f1':'要件定義→マーケット/規制確認','oem.f2':'処方・意匠提案→試作','oem.f3':'安定性/微生物試験→適合確認','oem.f4':'量産→日本での充填/再検査→出荷','oem.note':'* サウジ/UAE/トルコ等、各規制・ハラール基準に合わせて最適化。',
+        'cert.title':'適合・認証','cert.note':'* 証明書や表記は製品/ライン・販路法規に依存します。',
+        'contact.title':'お問い合わせ','contact.cta1':'メールを送る','contact.cta2':'製品カタログ（PDF）','contact.legal':'© {year} ETLAS Co., Ltd. All rights reserved.','contact.quick':'クイックメッセージ（静的フォーム例）',
+        'form.name':'お名前','form.msg':'メッセージ','form.submit':'送信','form.thanks':'ありがとうございます。近日中にご連絡いたします。'
+      },
+      en: {
+        'brand.badge':'Halal Beauty from Japan',
+        'nav.about':'About','nav.products':'Products','nav.oem':'OEM/ODM','nav.cert':'Compliance','nav.contact':'Contact',
+        'hero.titleA':'Halal Beauty from Japan','hero.titleB':'Premium care with warmth','hero.desc':'We craft Halal-compliant skincare & mother-baby products with Japanese quality and aesthetics for the Middle East and beyond.',
+        'cta.primary':'View Products','cta.secondary':'OEM/ODM Inquiry',
+        'about.title':'Brand & Vision','about.lead':'Shiora stands for “Halal × Premium”: compliant, safe, effective—beautifully presented.','about.li1':'Focus on Middle East & SE Asia','about.li2':'Japanese ingredients / craftsmanship / global compliance','about.li3':'Elegant visuals with gold accents and blue–pink–purple vibes',
+        'about.title2':'Company','about.addr':'Osaka, Japan','about.note':'* Sachets may be produced overseas; bulk filling/QC in Japan to support “Made in Japan” routes (jurisdiction-dependent).',
+        'prod.lead':'Halal masks are our current focus; mother & baby lineup will follow regulatory pathways.','prod.m1.name':'Shiora Halal 3D Mask','prod.m1.desc':'3D fit with fish collagen + hyaluronic acid + elastin for gentle hydration and bounce.','prod.m2.name':'Shiora Science & Fun Edition (KSA)','prod.m2.desc':'Hero-style IP for shelf impact and social virality.','prod.f1.name':'Shiora Halal Infant Formula (0–3m)','prod.f1.desc':'Soft blue–pink–purple palette balancing professionalism and a hint of mystery.',
+        'oem.title':'OEM/ODM Capabilities','oem.li1':'MOQ reference: from 3,000 units (by item)','oem.li2':'Custom formulas: fish collagen / plant options, fragrance free, sensitive-skin',
+        'oem.li3':'Packaging: gold foil, hang-hole sachets, gift boxes','oem.li4':'Cert support: Halal, GMP, ISO; export docs',
+        'oem.flow':'Development Flow (example)','oem.f1':'Discovery → Market/Reg check','oem.f2':'Formula & design proposal → samples','oem.f3':'Stability/micro tests → compliance','oem.f4':'PO → Japan filling/QC → shipment','oem.note':'* Localized for KSA, UAE, Türkiye, etc., per regulations & Halal standards.',
+        'cert.title':'Compliance & Certification','cert.note':'* Certificates/markings depend on product/line and destination laws.',
+        'contact.title':'Contact Us','contact.cta1':'Email Us','contact.cta2':'Download Catalog (PDF)','contact.legal':'© {year} ETLAS Co., Ltd. All rights reserved.','contact.quick':'Quick Message (static demo)',
+        'form.name':'Name','form.msg':'Message','form.submit':'Send','form.thanks':'Thanks! We will get back to you soon.'
+      }
+    };
+
+    function t(key){
+      const lang = localStorage.getItem('lang') || 'zh';
+      return (I18N[lang] && I18N[lang][key]) || (I18N['en'][key]) || key;
+    }
+
+    function setLang(lang){
+      localStorage.setItem('lang', lang);
+      document.querySelectorAll('[data-i]').forEach(el=>{
+        const k = el.getAttribute('data-i');
+        const val = t(k);
+        if(!val) return;
+        if(k.startsWith('contact.legal')){
+          el.textContent = val.replace('{year}', new Date().getFullYear());
+        }else{
+          el.textContent = val;
+        }
+      });
+    }
+
+    // 初始语言 & 年份
+    document.addEventListener('DOMContentLoaded',()=>{
+      document.getElementById('year').textContent = new Date().getFullYear();
+      setLang(localStorage.getItem('lang')||'zh');
+    });
+  </script>
+</body>
+</html>
