@@ -106,7 +106,39 @@
             <a href="#oem" class="btn ghost" data-i="cta.secondary">咨询OEM/ODM</a>
           </div>
         </div>
-        <div class="card ill"><img src="maskpack.jpg" alt="Shiora mask" style="max-width:100%;max-height:100%;border-radius:12px"></div>
+        
+<div class="card ill" style="position:relative;overflow:hidden">
+  <div class="slider" id="heroSlider" style="height:100%;display:flex;transition:transform .6s ease;">
+    <img src="maskpack.jpg" alt="Shiora mask" style="flex:0 0 100%;object-fit:contain;max-width:100%;max-height:100%;border-radius:12px">
+    <img src="infant.jpg" alt="Shiora infant formula" style="flex:0 0 100%;object-fit:contain;max-width:100%;max-height:100%;border-radius:12px">
+  </div>
+  <button class="btn" id="prevBtn" aria-label="Previous" style="position:absolute;left:8px;top:50%;transform:translateY(-50%);z-index:2">‹</button>
+  <button class="btn" id="nextBtn" aria-label="Next" style="position:absolute;right:8px;top:50%;transform:translateY(-50%);z-index:2">›</button>
+  <div id="dots" style="position:absolute;bottom:8px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+    <span class="dot" data-i="dot1" style="width:8px;height:8px;border-radius:50%;background:#fff;opacity:.6"></span>
+    <span class="dot" data-i="dot2" style="width:8px;height:8px;border-radius:50%;background:#fff;opacity:.2"></span>
+  </div>
+</div>
+<script>
+(function(){
+  const slider = document.getElementById('heroSlider');
+  const slides = slider.children;
+  const dots = document.querySelectorAll('#dots .dot');
+  let idx = 0, n = slides.length, timer;
+  function update(){
+    slider.style.transform = 'translateX(' + (-100*idx) + '%)';
+    dots.forEach((d,i)=> d.style.opacity = (i===idx? '0.8':'0.3'));
+  }
+  function next(){ idx = (idx+1)%n; update(); }
+  function prev(){ idx = (idx-1+n)%n; update(); }
+  document.getElementById('nextBtn').addEventListener('click', ()=>{ next(); resetAuto(); });
+  document.getElementById('prevBtn').addEventListener('click', ()=>{ prev(); resetAuto(); });
+  function auto(){ timer = setInterval(next, 4000); }
+  function resetAuto(){ clearInterval(timer); auto(); }
+  update(); auto();
+})();
+</script>
+
       </div>
     </section>
 
