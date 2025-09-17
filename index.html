@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="tr">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Shiora | ETLAS — 来自日本的清真美妆</title>
-  <meta name="description" content="Shiora（ETLAS株式会社）— 日本清真（Halal）美妆与母婴品牌。面膜OEM/ODM、清真认证合规，出口中东等市场。" />
+  <title>Shiora | ETLAS — Japonya’dan Helal Güzellik</title>
+  <meta name="description" content="Shiora (ETLAS Co., Ltd.) — Japonya’dan Helal (Halal) güzellik ve anne-bebek markası. Yüz maskeleri OEM/ODM, helal uygunluk, Orta Doğu’ya ihracat."/>
   <style>
     :root{
       --bg:#0f1020;          /* 深色底：夜空感 */
@@ -89,6 +89,7 @@
         <button class="btn" onclick="setLang('zh')">简</button>
         <button class="btn" onclick="setLang('ja')">日</button>
         <button class="btn" onclick="setLang('en')">EN</button>
+        <button class="btn" onclick="setLang('tr')">TR</button>
       </div>
     </div>
   </header>
@@ -306,6 +307,23 @@
         'contact.title':'Contact Us','contact.cta1':'Email Us','contact.cta2':'Download Catalog (PDF)','contact.legal':'© {year} ETLAS Co., Ltd. All rights reserved.','contact.quick':'Quick Message (static demo)',
         'form.name':'Name','form.msg':'Message','form.submit':'Send','form.thanks':'Thanks! We will get back to you soon.'
       }
+      ,
+      tr: {
+        'brand.badge':'Japonya’dan Helal Güzellik',
+        'nav.about':'Hakkımızda','nav.products':'Ürünler','nav.oem':'OEM/ODM','nav.cert':'Sertifikalar','nav.contact':'İletişim',
+        'hero.titleA':'Japonya’dan Helal Güzellik','hero.titleB':'Sıcacık bir dokunuşla premium bakım','hero.desc':'Helal standartlara uygun cilt bakım ve anne-bebek ürünlerini Japon kalitesi ve estetiğiyle Orta Doğu ve dünya pazarına sunuyoruz.',
+        'cta.primary':'Ürünleri Gör','cta.secondary':'OEM/ODM Danışma',
+        'about.title':'Marka & Vizyon','about.lead':'Shiora, “Helal × Premium” anlayışını temsil eder: Uyumlu, güvenli, etkili ve estetik.','about.li1':'Orta Doğu ve Güneydoğu Asya helal pazarına odaklanma','about.li2':'Japon hammaddeleri / Japon işçiliği / Uluslararası uygunluk','about.li3':'Altın detaylar ve mavi–pembe–mor zarif estetik',
+        'about.title2':'Şirket Bilgileri','about.addr':'Japonya・Osaka','about.note':'* Tekli poşet ambalaj yurt dışında üretilebilir; içerik Japonya’da doldurulup yeniden kontrol edilerek “Made in Japan” göstergesine destek sağlanır (yargı alanına göre değişir).',
+        'prod.lead':'Şu anda odak ürünümüz helal yüz maskeleridir; anne-bebek ürünleri mevzuat doğrultusunda ilerlemektedir.','prod.m1.name':'Shiora Helal 3D Maske','prod.m1.desc':'3D kesimle yüzü kavrar; balık kolajeni + hyaluronik asit + elastin ile nazik nem ve esneklik.','prod.m2.name':'Shiora Bilim & Eğlence Sürümü (KSA)','prod.m2.desc':'Süper kahraman tarzı IP ile raf etkisi ve sosyal medya yayılımı.','prod.f1.name':'Shiora Helal Bebek Maması (0–3 Ay)','prod.f1.desc':'Mavi×pembe×mor yumuşak palet; profesyonellik ve hafif gizem hissi.',
+        'oem.title':'OEM/ODM Kapasiteleri','oem.li1':'Asgari sipariş miktarı: ~3.000 birim (ürüne göre değişir)','oem.li2':'Formül özelleştirme: balık kolajeni/bitkisel alternatif, parfümlü/parfümsüz, hassas cilt','oem.li3':'Ambalaj: altın varak, askılı tekli paket, hediye kutusu','oem.li4':'Sertifikalar: Helal, GMP, ISO; ihracat evrakları',
+        'oem.flow':'Geliştirme Süreci (ör.)','oem.f1':'Gereksinim analizi → Pazar/mevzuat kontrolü','oem.f2':'Formül ve tasarım önerisi → numune','oem.f3':'Stabilite/mikrobiyal testler → uygunluk','oem.f4':'Sipariş → Japonya’da dolum/KG → sevkiyat','oem.note':'* KSA, BAE, Türkiye vb. için yerel mevzuat ve helal standartlarına göre uyarlama yapılır.',
+        'cert.title':'Uygunluk & Sertifikalar','cert.note':'* Sertifikalar/işaretlemeler ürün/hat ve hedef pazar hukukuna bağlıdır.',
+        'contact.title':'Bize Ulaşın','contact.cta1':'E‑posta Gönder','contact.cta2':'Ürün Kataloğu (PDF)','contact.legal':'© {year} ETLAS Co., Ltd. Tüm hakları saklıdır.','contact.quick':'Hızlı Mesaj (statik form)',
+        'form.name':'Ad Soyad','form.msg':'Mesaj','form.submit':'Gönder','form.thanks':'Teşekkür ederiz! En kısa sürede dönüş yapacağız.'
+      }
+
+
     };
 
     function t(key){
@@ -330,7 +348,7 @@
     // 初始语言 & 年份
     document.addEventListener('DOMContentLoaded',()=>{
       document.getElementById('year').textContent = new Date().getFullYear();
-      setLang(localStorage.getItem('lang')||'zh');
+      setLang(localStorage.getItem('lang')||'tr');
     });
   </script>
 </body>
