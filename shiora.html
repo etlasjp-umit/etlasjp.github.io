@@ -235,6 +235,13 @@
       .prod-gallery{grid-template-columns:1fr}
       .prod-gallery img{height:170px}
     }
+
+    .product-gallery-four{grid-template-columns:repeat(2,minmax(0,1fr));}
+    .product-gallery-four img{height:190px;}
+    @media (max-width:720px){
+      .product-gallery-four{grid-template-columns:repeat(2,minmax(0,1fr));}
+      .product-gallery-four img{height:145px;}
+    }
   </style>
 </head>
 <body>
@@ -292,10 +299,9 @@
 
         <div class="card ill" style="position:relative;overflow:hidden">
           <div class="slider" id="heroSlider" style="height:100%;display:flex;transition:transform .6s ease;">
-            <img src="maskpack.jpg" alt="Shiora mask" style="flex:0 0 100%;object-fit:contain;max-width:100%;max-height:100%;border-radius:12px">
-            <img src="shiora-sleeping-mask-1.jpg" alt="Shiora Sleeping Mask" style="flex:0 0 100%;object-fit:contain;max-width:100%;max-height:100%;border-radius:12px">
-            <img src="shiora-sleeping-mask-3.jpg" alt="Shiora Sleeping Mask box" style="flex:0 0 100%;object-fit:contain;max-width:100%;max-height:100%;border-radius:12px">
-            <img src="shiora-sleeping-mask-2.jpg" alt="Shiora Sleeping Mask back label" style="flex:0 0 100%;object-fit:contain;max-width:100%;max-height:100%;border-radius:12px">
+            <img src="mask1.jpeg" alt="Shiora Sleeping Mask with package" style="flex:0 0 100%;width:100%;height:100%;object-fit:cover;border-radius:12px">
+            <img src="mask2.jpeg" alt="Shiora Sleeping Mask package" style="flex:0 0 100%;width:100%;height:100%;object-fit:cover;border-radius:12px">
+            <img src="mask3.jpeg" alt="Shiora Sleeping Mask jar lid" style="flex:0 0 100%;width:100%;height:100%;object-fit:cover;border-radius:12px">
           </div>
           <button class="btn" id="prevBtn" aria-label="Previous" type="button" style="position:absolute;left:8px;top:50%;transform:translateY(-50%);z-index:2">‹</button>
           <button class="btn" id="nextBtn" aria-label="Next" type="button" style="position:absolute;right:8px;top:50%;transform:translateY(-50%);z-index:2">›</button>
@@ -337,49 +343,24 @@
       <h2>Products｜产品</h2>
       <p class="lead" data-i="prod.lead">当前主推清真面膜与护肤系列，Shiora 抹茶处于研发与产品规划阶段。</p>
 
-      <div class="grid cols-3">
-        <div class="card">
-          <div class="row" style="justify-content:space-between;align-items:center">
-            <strong data-i="prod.m1.name">Shiora Halal 3D 面膜</strong>
-            <span class="tag">HALAL</span>
-          </div>
-          <p class="lead" data-i="prod.m1.desc">3D 立体剪裁贴合，鱼来源胶原 + 玻尿酸 + 弹性蛋白，温和保湿、紧致弹润。</p>
-          <div class="row">
-            <span class="pill">Collagen</span>
-            <span class="pill">Elastin</span>
-            <span class="pill">HA</span>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="row" style="justify-content:space-between;align-items:center">
-            <strong data-i="prod.m2.name">Shiora 科学搞笑款（沙特市场定制）</strong>
-            <span class="tag">HALAL</span>
-          </div>
-          <p class="lead" data-i="prod.m2.desc">以“超级胶原 & Q弹弹性”IP 形象打造的趣味包装，提高货架识别与社媒传播力。</p>
-          <div class="row">
-            <span class="pill">Shelf Impact</span>
-            <span class="pill">UGC</span>
-            <span class="pill">KSA</span>
-          </div>
-        </div>
-
+      <div class="grid cols-2">
         <div class="card">
           <div class="row" style="justify-content:space-between;align-items:center">
             <strong data-i="prod.s1.name">Shiora Sleeping Mask</strong>
             <span class="tag">NEW</span>
           </div>
-          <img class="prod-img" src="shiora-sleeping-mask-1.jpg" alt="Shiora Sleeping Mask jar">
-          <p class="lead" data-i="prod.s1.desc">Overnight leave-on sleeping mask concept: turmeric + collagen for moisture and glow. (Sample visuals)</p>
+          <img class="prod-img" src="shiora-product-1.jpeg" alt="SHIORA Sleeping Mask with package">
+          <p class="lead" data-i="prod.s1.desc">SHIORA睡眠面膜是由ETLAS株式会社推出的日本制造夜间护肤产品。精选姜黄根提取物、海洋鱼胶原蛋白、角鲨烷、海藻糖、日本米糠水及维生素E等成分，睡前涂抹，无需清洗，帮助肌肤补充水分、缓解干燥，使清晨肌肤更加柔润细腻。50g装。</p>
           <div class="row">
-            <span class="pill">Sleeping Mask</span>
-            <span class="pill">Turmeric</span>
-            <span class="pill">Collagen</span>
+            <span class="pill">50g</span>
+            <span class="pill">Made in Japan</span>
+            <span class="pill">Overnight Care</span>
           </div>
-          <div class="prod-gallery" aria-label="Shiora Sleeping Mask gallery">
-            <img src="shiora-sleeping-mask-1.jpg" alt="Front label">
-            <img src="shiora-sleeping-mask-2.jpg" alt="Back label">
-            <img src="shiora-sleeping-mask-3.jpg" alt="Box design">
+          <div class="prod-gallery product-gallery-four" aria-label="Shiora Sleeping Mask gallery">
+            <img src="shiora-product-1.jpeg" alt="SHIORA Sleeping Mask jar and package">
+            <img src="shiora-product-2.jpeg" alt="SHIORA Sleeping Mask package">
+            <img src="shiora-product-3.jpeg" alt="SHIORA Sleeping Mask lid design">
+            <img src="shiora-product-4.jpeg" alt="SHIORA Sleeping Mask texture and application">
           </div>
         </div>
 
@@ -594,12 +575,12 @@
         'about.title':'品牌与愿景','about.lead':'Shiora 源自日本，主打“清真 + 高端”的产品哲学：合规、安全、有效、审美在线。','about.li1':'聚焦中东与东南亚清真市场','about.li2':'日本原料 / 日本工艺 / 国际合规','about.li3':'包装与视觉强调东方雅致（金色点缀、蓝粉紫氛围）',
         'about.title2':'公司信息','about.addr':'〒652-0862 兵庫県神戸市兵庫区上庄通3丁目1-1 2F-2D',
         'contact.addr':'〒652-0862 兵庫県神戸市兵庫区上庄通3丁目1-1 2F-2D','about.note':'* 单片包装可在海外生产，内料在日本灌装/复检以满足“日本制造”相关标识规范（依各法域规则具体判定）。',
-        'prod.lead':'当前主推清真面膜与护肤系列，Shiora 抹茶处于研发与产品规划阶段。','prod.m1.name':'Shiora Halal 3D 面膜','prod.m1.desc':'3D 立体剪裁贴合，鱼来源胶原 + 玻尿酸 + 弹性蛋白，温和保湿、紧致弹润。','prod.m2.name':'Shiora 科学搞笑款（沙特市场定制）','prod.m2.desc':'以“超级胶原 & Q弹弹性”IP 形象打造的趣味包装，提高货架识别与社媒传播力。','prod.f1.name':'Shiora 抹茶（研发概念）','prod.f1.desc':'以日本抹茶灵感打造的健康饮品概念，强调自然、平衡与清新体验；目前处于研发与配方规划阶段，计划近期上市。','prod.f1.tag':'R&D｜研发中','prod.note':'* Shiora 抹茶目前为研发中概念，页面信息仅用于产品方向展示与商务沟通，不构成最终销售说明。',
+        'prod.lead':'当前主推 Shiora 睡眠面膜，Shiora 抹茶处于研发与产品规划阶段。','prod.f1.name':'Shiora 抹茶（研发概念）','prod.f1.desc':'以日本抹茶灵感打造的健康饮品概念，强调自然、平衡与清新体验；目前处于研发与配方规划阶段，计划近期上市。','prod.f1.tag':'R&D｜研发中','prod.note':'* Shiora 抹茶目前为研发中概念，页面信息仅用于产品方向展示与商务沟通，不构成最终销售说明。',
         'oem.title':'OEM/ODM 能力','oem.li1':'最小起订量参考：3,000 单位起（依品类协商）','oem.li2':'配方定制：可选鱼胶原/植物替代、香精/无香、敏感肌版本','oem.li3':'包装定制：金箔烫印、蓝/粉/紫主题、可挂孔单片/精品礼盒','oem.li4':'认证支持：Halal、GMP、ISO；可配合准备 COA、MSDS、自由销售证明等出口资料','oem.flow':'开发流程（示例）','oem.f1':'需求沟通 → 目标市场/法规确认','oem.f2':'配方与包装提案 → 样品打样','oem.f3':'稳定性/微生物等测试 → 合规审核','oem.f4':'下单生产 → 日本灌装/复检 → 出厂','oem.note':'* 可根据沙特、阿联酋、土耳其等地法规及清真标准进行本地化适配，交期视配方复杂度与认证需求而定。',
         'cert.title':'合规与认证','cert.halal':'支持 NAHA / BPJPH 等路线，具体依产品与工厂配置而定。','cert.gmp':'良好生产规范体系，配合第三方检验与出厂检验。','cert.iso':'按项目需求配合质量、环境等相关体系要求。','cert.obtained.title':'已取得/可提供的证明（示例）','cert.obtained.halal':'部分护肤产品可配合提供 Halal 相关证书复印件（视产品与合作工厂而定）。','cert.obtained.docs':'常规检验报告、成分表（INCI）、COA、MSDS 等支持对接。','cert.planned.title':'规划中/可应对的品类','cert.planned.baby':'健康饮品等新品类可根据目标市场法规与 Halal 要求进行设计与规划。','cert.planned.note':'细节可在一对一沟通中，根据贵司目标国家和渠道共同确认。','cert.note':'* 具体证书名称、编号及标注方式依产品/产线与目标市场法规最终确定。',
         'contact.title':'联系我们','contact.cta1':'发送邮件','contact.cta2':'下载产品型录（PDF）','contact.legal':'© {year} ETLAS Co., Ltd. 保留所有权利。','contact.quick':'快速留言','contact.note':'我们通常会在 1–2 个工作日内回复您的邮件或留言，欢迎就成品代理、OEM/ODM 或 Halal 合规问题与我们联系。',
         'form.name':'姓名','form.company':'公司名称（选填）','form.country':'国家/地区','form.type':'需求类型','form.type.placeholder':'请选择… / Please select…','form.type.oem':'OEM/ODM 合作','form.type.dist':'代理/经销','form.type.wholesale':'批发采购','form.type.other':'其他（请在留言中说明）','form.msg':'留言','form.submit':'提交','form.thanks':'感谢您的留言！我们会在 1–2 个工作日内与您联系。',
-        'prod.s1.name':'Shiora 睡眠面膜（Sleeping Mask）','prod.s1.desc':'夜间免洗睡眠面膜概念：姜黄 + 胶原，主打滋润、透亮与柔滑肤感。（示意图/样品视觉）'
+        'prod.s1.name':'SHIORA 睡眠面膜','prod.s1.desc':'SHIORA睡眠面膜是由ETLAS株式会社推出的日本制造夜间护肤产品。精选姜黄根提取物、海洋鱼胶原蛋白、角鲨烷、海藻糖、日本米糠水及维生素E等成分，睡前涂抹，无需清洗，帮助肌肤补充水分、缓解干燥，使清晨肌肤更加柔润细腻。50g装。'
       },
       ja: {
         'brand.badge':'日本発・ハラールビューティー',
@@ -609,13 +590,13 @@
         'about.title':'ブランド＆ビジョン','about.lead':'Shiora は「ハラール × プレミアム」。安全・有効性・審美性を兼ね備えます。','about.li1':'中東／東南アジアのハラール市場に注力','about.li2':'日本原料・日本のものづくり・国際規格準拠','about.li3':'金箔アクセント、ブルー/ピンク/パープルの上品な世界観',
         'about.title2':'会社情報','about.addr':'〒652-0862 兵庫県神戸市兵庫区上庄通3丁目1-1 2F-2D',
         'contact.addr':'〒652-0862 兵庫県神戸市兵庫区上庄通3丁目1-1 2F-2D','about.note':'* 個包装は海外製造でも、日本での充填・再検査で表示要件を満たす運用に対応（法域により要確認）。',
-        'prod.lead':'現在はハラール対応マスクとスキンケアが主力で、Shiora 抹茶は開発および商品企画段階です。','prod.m1.name':'Shiora ハラール 3D マスク','prod.m1.desc':'立体フィット。フィッシュコラーゲン＋ヒアルロン酸＋エラスチンで保湿＆ハリ感。','prod.m2.name':'Shiora サイエンス＆ユーモア版（KSA向け）','prod.m2.desc':'ヒーロー風IPで棚前訴求とSNS拡散力を強化。','prod.f1.name':'Shiora 抹茶（開発コンセプト）','prod.f1.desc':'日本の抹茶に着想を得たウェルネスドリンクのコンセプトです。自然な心地よさ、バランス、リフレッシュ感を重視し、現在は処方設計と商品企画を進めており、近日発売予定です。','prod.f1.tag':'R&D｜開発中','prod.note':'* Shiora 抹茶は現在開発中のコンセプト製品です。掲載内容は商品方向性および商談用の参考情報であり、最終的な販売表示ではありません。',
+        'prod.lead':'現在の主力製品は Shiora スリーピングマスクで、Shiora 抹茶は開発・商品企画段階です。','prod.f1.name':'Shiora 抹茶（開発コンセプト）','prod.f1.desc':'日本の抹茶に着想を得たウェルネスドリンクのコンセプトです。自然な心地よさ、バランス、リフレッシュ感を重視し、現在は処方設計と商品企画を進めており、近日発売予定です。','prod.f1.tag':'R&D｜開発中','prod.note':'* Shiora 抹茶は現在開発中のコンセプト製品です。掲載内容は商品方向性および商談用の参考情報であり、最終的な販売表示ではありません。',
         'oem.title':'OEM/ODM 提供能力','oem.li1':'最小ロット目安：3,000〜（製品により応相談）','oem.li2':'処方カスタム：フィッシュ由来／植物代替、香料有無、敏感肌向け','oem.li3':'パッケージ：金箔、吊り下げ対応、ギフト箱など','oem.li4':'認証サポート：Halal/GMP/ISO、COA・MSDS・自由販売証明書など輸出ドキュメント支援',
         'oem.flow':'開発フロー（例）','oem.f1':'要件定義→マーケット/規制確認','oem.f2':'処方・意匠提案→試作','oem.f3':'安定性/微生物試験→適合確認','oem.f4':'量産→日本での充填/再検査→出荷','oem.note':'* サウジ/UAE/トルコ等、各規制・ハラール基準に合わせて最適化。リードタイムは処方の難易度・認証の有無により変動します。',
         'cert.title':'適合・認証','cert.halal':'NAHA / BPJPH 等のハラールルートに対応（製品・工場構成により異なります）。','cert.gmp':'GMP に基づく製造管理体制と第三者検査・出荷検査。','cert.iso':'プロジェクトに応じて品質・環境等の規格要件に対応。','cert.obtained.title':'取得済み・提供可能なドキュメント（例）','cert.obtained.halal':'一部スキンケア製品についてはハラール関連書類（写し）をご用意可能です。','cert.obtained.docs':'試験成績書、成分リスト（INCI）、COA、MSDS など。','cert.planned.title':'検討中／対応可能なカテゴリー','cert.planned.baby':'健康飲料などの新カテゴリーも、販売国の規制とハラール要件に合わせて設計・企画可能です。','cert.planned.note':'詳細はターゲット国・チャネルを伺ったうえで個別にご提案します。','cert.note':'* 証明書名・番号・表示方法は製品/ライン・販売国の法規により最終決定されます。',
         'contact.title':'お問い合わせ','contact.cta1':'メールを送る','contact.cta2':'製品カタログ（PDF）','contact.legal':'© {year} ETLAS Co., Ltd. All rights reserved.','contact.quick':'クイックメッセージ','contact.note':'通常 1〜2 営業日以内にご返信いたします。完成品販売、OEM/ODM、ハラール適合に関するご相談をお待ちしております。',
         'form.name':'お名前','form.company':'会社名（任意）','form.country':'国・地域','form.type':'お問い合わせ種別','form.type.placeholder':'選択してください…','form.type.oem':'OEM/ODM のご相談','form.type.dist':'代理店・ディストリビューション','form.type.wholesale':'卸売仕入れ','form.type.other':'その他（自由記入）','form.msg':'メッセージ','form.submit':'送信','form.thanks':'お問い合わせありがとうございます。1〜2営業日以内にご連絡いたします。',
-        'prod.s1.name':'Shiora スリーピングマスク','prod.s1.desc':'夜用の洗い流さないスリーピングマスク（コンセプト）：ターメリック＋コラーゲンでうるおいとツヤ感。（イメージ/サンプル）'
+        'prod.s1.name':'SHIORA スリーピングマスク','prod.s1.desc':'SHIORAスリーピングマスクは、ETLAS株式会社が展開する日本製の夜用スキンケア製品です。ウコン根エキス、海洋由来フィッシュコラーゲン、スクワラン、トレハロース、日本産米ぬか水、ビタミンEなどを配合。就寝前に塗布し、洗い流す必要はありません。肌にうるおいを与えて乾燥を防ぎ、翌朝の肌をやわらかく、なめらかに整えます。内容量50g。'
       },
       en: {
         'brand.badge':'Halal Beauty from Japan',
@@ -625,13 +606,13 @@
         'about.title':'Brand & Vision','about.lead':'Shiora stands for “Halal × Premium”: compliant, safe, effective—beautifully presented.','about.li1':'Focus on Middle East & Southeast Asia','about.li2':'Japanese ingredients / craftsmanship / global compliance','about.li3':'Elegant visuals with gold accents and blue–pink–purple vibes',
         'about.title2':'Company','about.addr':'2F-2D, Kamisho-dori 3-1-1, Hyogo-ku, Kobe-shi, Hyogo 652-0862, Japan',
         'contact.addr':'2F-2D, Kamisho-dori 3-1-1, Hyogo-ku, Kobe-shi, Hyogo 652-0862, Japan','about.note':'* Sachets may be produced overseas; bulk filling/QC in Japan to support “Made in Japan” routes (jurisdiction-dependent).',
-        'prod.lead':'Our current focus is on Halal masks and skincare, while Shiora Matcha is under research and product planning.','prod.m1.name':'Shiora Halal 3D Mask','prod.m1.desc':'3D fit with fish collagen + hyaluronic acid + elastin for gentle hydration and bounce.','prod.m2.name':'Shiora Science & Fun Edition (KSA)','prod.m2.desc':'Hero-style IP for shelf impact and social virality.','prod.f1.name':'Shiora Matcha – R&D Concept','prod.f1.desc':'A wellness drink concept inspired by Japanese matcha, designed to express natural balance, gentle refreshment, and everyday vitality. It is currently under research and formulation planning, with launch expected soon.','prod.f1.tag':'R&D｜In development','prod.note':'* Shiora Matcha is currently an R&D concept. The information shown here is for product introduction and business communication only, and does not represent final sales claims.',
+        'prod.lead':'Our current focus is the Shiora Sleeping Mask, while Shiora Matcha is under research and product planning.','prod.f1.name':'Shiora Matcha – R&D Concept','prod.f1.desc':'A wellness drink concept inspired by Japanese matcha, designed to express natural balance, gentle refreshment, and everyday vitality. It is currently under research and formulation planning, with launch expected soon.','prod.f1.tag':'R&D｜In development','prod.note':'* Shiora Matcha is currently an R&D concept. The information shown here is for product introduction and business communication only, and does not represent final sales claims.',
         'oem.title':'OEM/ODM Capabilities','oem.li1':'MOQ reference: from ~3,000 units (depending on SKU)','oem.li2':'Custom formulas: fish collagen / plant options, fragrance-free, sensitive-skin versions','oem.li3':'Packaging: gold foil, hang-hole sachets, gift boxes, etc.','oem.li4':'Support with Halal, GMP, ISO as well as COA, MSDS, free-sale certificates and other export documentation',
         'oem.flow':'Development Flow (example)','oem.f1':'Discovery → target markets / regulations','oem.f2':'Formula & design proposal → sampling','oem.f3':'Stability / micro tests → compliance review','oem.f4':'PO → filling & QC in Japan → shipment','oem.note':'* Localization for KSA, UAE, Türkiye, etc., according to local regulations and Halal standards. Lead time depends on complexity and certification scope.',
         'cert.title':'Compliance & Certification','cert.halal':'Supports NAHA / BPJPH and other Halal routes depending on product and facility.','cert.gmp':'GMP-based production control with third-party and outgoing inspections.','cert.iso':'Aligned with relevant quality/environment standards where required.','cert.obtained.title':'Available / typical documentation (examples)','cert.obtained.halal':'Halal-related documents may be provided for certain skincare lines (subject to product/facility).','cert.obtained.docs':'Test reports, INCI ingredient lists, COA, MSDS, etc.','cert.planned.title':'Planned / potential categories','cert.planned.baby':'New wellness categories such as functional drinks can be planned according to target-market regulations and Halal requirements.','cert.planned.note':'Details can be refined together according to your target countries and channels.','cert.note':'* Exact certificate types, numbers and markings depend on product/line and destination laws.',
         'contact.title':'Contact Us','contact.cta1':'Email Us','contact.cta2':'Download Catalog (PDF)','contact.legal':'© {year} ETLAS Co., Ltd. All rights reserved.','contact.quick':'Quick Message','contact.note':'We usually reply within 1–2 business days. Feel free to reach out about finished products, OEM/ODM or Halal compliance.',
         'form.name':'Name','form.company':'Company (optional)','form.country':'Country / Region','form.type':'Inquiry type','form.type.placeholder':'Please select…','form.type.oem':'OEM/ODM collaboration','form.type.dist':'Distribution / agency','form.type.wholesale':'Wholesale purchase','form.type.other':'Other (please specify in message)','form.msg':'Message','form.submit':'Send','form.thanks':'Thanks for your message! We will get back to you within 1–2 business days.',
-        'prod.s1.name':'Shiora Sleeping Mask','prod.s1.desc':'Overnight leave-on sleeping mask concept: turmeric + collagen for moisture and glow. (Sample visuals)'
+        'prod.s1.name':'SHIORA Sleeping Mask','prod.s1.desc':'SHIORA Sleeping Mask is a night-care skincare product made in Japan and introduced by ETLAS Co., Ltd. Formulated with turmeric root extract, marine fish collagen, squalane, trehalose, Japanese rice bran water and vitamin E. Apply before bedtime and leave on overnight without rinsing. It helps replenish moisture, relieve dryness, and leave the skin feeling softer and smoother by morning. Net weight: 50 g.'
       },
       tr: {
         'brand.badge':'Japonya’dan Helal Güzellik',
@@ -641,13 +622,13 @@
         'about.title':'Marka & Vizyon','about.lead':'Shiora, “Helal × Premium” anlayışını temsil eder: uyumlu, güvenli, etkili ve estetik.','about.li1':'Orta Doğu ve Güneydoğu Asya helal pazarına odaklanma','about.li2':'Japon hammaddeleri / Japon işçiliği / Uluslararası uygunluk','about.li3':'Altın detaylar ve mavi–pembe–mor zarif estetik',
         'about.title2':'Şirket Bilgileri','about.addr':'2F-2D, Kamisho-dori 3-1-1, Hyogo-ku, Kobe-shi, Hyogo 652-0862, Japonya',
         'contact.addr':'2F-2D, Kamisho-dori 3-1-1, Hyogo-ku, Kobe-shi, Hyogo 652-0862, Japonya','about.note':'* Tekli poşet ambalaj yurt dışında üretilebilir; içerik Japonya’da doldurulup yeniden kontrol edilerek “Made in Japan” göstergesine destek sağlanır (yargı alanına göre değişir).',
-        'prod.lead':'Şu anda odak ürünlerimiz helal maskeler ve cilt bakım serileridir; Shiora Matcha ise Ar-Ge ve ürün planlama aşamasındadır.','prod.m1.name':'Shiora Helal 3D Maske','prod.m1.desc':'3D kesimle yüzü kavrar; balık kolajeni + hyaluronik asit + elastin ile nazik nem ve esneklik.','prod.m2.name':'Shiora Bilim & Eğlence Sürümü (KSA)','prod.m2.desc':'Süper kahraman tarzı IP ile raf etkisi ve sosyal medya yayılımı.','prod.f1.name':'Shiora Matcha – Ar-Ge Konsepti','prod.f1.desc':'Japon matchasından ilham alan bir wellness içeceği konseptidir. Doğal denge, ferahlık ve günlük canlılık hissini öne çıkarır. Şu anda Ar-Ge ve formül planlama aşamasındadır; yakında piyasaya sunulması planlanmaktadır.','prod.f1.tag':'Ar-Ge｜Geliştiriliyor','prod.note':'* Shiora Matcha şu anda Ar-Ge aşamasındaki bir konsept üründür. Buradaki bilgiler ürün tanıtımı ve iş görüşmeleri içindir; nihai satış beyanı değildir.',
+        'prod.lead':'Şu anda ana ürünümüz Shiora Sleeping Mask’tir; Shiora Matcha ise Ar-Ge ve ürün planlama aşamasındadır.','prod.f1.name':'Shiora Matcha – Ar-Ge Konsepti','prod.f1.desc':'Japon matchasından ilham alan bir wellness içeceği konseptidir. Doğal denge, ferahlık ve günlük canlılık hissini öne çıkarır. Şu anda Ar-Ge ve formül planlama aşamasındadır; yakında piyasaya sunulması planlanmaktadır.','prod.f1.tag':'Ar-Ge｜Geliştiriliyor','prod.note':'* Shiora Matcha şu anda Ar-Ge aşamasındaki bir konsept üründür. Buradaki bilgiler ürün tanıtımı ve iş görüşmeleri içindir; nihai satış beyanı değildir.',
         'oem.title':'OEM/ODM Kapasiteleri','oem.li1':'Asgari sipariş miktarı: ~3.000 birim (ürüne göre değişir)','oem.li2':'Formül özelleştirme: balık kolajeni/bitkisel alternatif, parfümlü/parfümsüz, hassas cilt','oem.li3':'Ambalaj: altın varak, askılı tekli paket, hediye kutusu vb.','oem.li4':'Sertifikalar: Helal, GMP, ISO; COA, MSDS, serbest satış belgesi gibi ihracat evrakları için destek',
         'oem.flow':'Geliştirme Süreci (ör.)','oem.f1':'Gereksinim analizi → hedef pazar/mevzuat','oem.f2':'Formül ve tasarım önerisi → numune','oem.f3':'Stabilite/mikrobiyal testler → uygunluk','oem.f4':'Sipariş → Japonya’da dolum/KG → sevkiyat','oem.note':'* KSA, BAE, Türkiye vb. pazarlar için yerel mevzuat ve helal standartlarına göre uyarlama yapılır; süre, formül karmaşıklığı ve sertifika kapsamına göre değişir.',
         'cert.title':'Uygunluk & Sertifikalar','cert.halal':'Ürün ve tesis yapısına bağlı olarak NAHA / BPJPH ve benzeri helal yollar desteklenir.','cert.gmp':'GMP’ye uygun üretim yönetimi, üçüncü taraf ve sevkiyat öncesi kontroller.','cert.iso':'Gerekli olduğunda kalite/çevre vb. ISO standartlarıyla uyum.','cert.obtained.title':'Mevcut/örnek dokümanlar','cert.obtained.halal':'Bazı cilt bakım serileri için helal ile ilgili belgeler (kopya) sağlanabilir.','cert.obtained.docs':'Test raporları, INCI içerik listeleri, COA, MSDS vb.','cert.planned.title':'Planlanan / potansiyel kategoriler','cert.planned.baby':'Fonksiyonel içecekler gibi yeni wellness kategorileri, hedef ülke mevzuatı ve helal şartlarına göre planlanabilir.','cert.planned.note':'Detaylar, hedef ülke ve kanal bilgilerinize göre birlikte netleştirilir.','cert.note':'* Kesin sertifika türleri, numaraları ve işaretler ürün/hat ve hedef ülke hukukuna göre belirlenir.',
         'contact.title':'Bize Ulaşın','contact.cta1':'E-posta Gönder','contact.cta2':'Ürün Kataloğu (PDF)','contact.legal':'© {year} ETLAS Co., Ltd. Tüm hakları saklıdır.','contact.quick':'Hızlı Mesaj','contact.note':'Genellikle 1–2 iş günü içinde dönüş sağlıyoruz. Hazır ürünler, OEM/ODM veya helal uygunluk hakkında bizimle iletişime geçebilirsiniz.',
         'form.name':'Ad Soyad','form.company':'Şirket Adı (opsiyonel)','form.country':'Ülke / Bölge','form.type':'Talep türü','form.type.placeholder':'Lütfen seçin…','form.type.oem':'OEM/ODM iş birliği','form.type.dist':'Distribütörlük / bayilik','form.type.wholesale':'Toptan alım','form.type.other':'Diğer (lütfen mesajda belirtin)','form.msg':'Mesaj','form.submit':'Gönder','form.thanks':'Mesajınız için teşekkür ederiz! 1–2 iş günü içinde size dönüş yapacağız。',
-        'prod.s1.name':'Shiora Sleeping Mask (Gece Maskesi)','prod.s1.desc':'Gece boyunca yüzde kalan sleeping mask konsepti: zerdeçal + kolajen; nem ve ışıltı. (Görsel/numune)'
+        'prod.s1.name':'SHIORA Sleeping Mask (Gece Maskesi)','prod.s1.desc':'SHIORA Sleeping Mask, ETLAS Co., Ltd. tarafından sunulan Japonya üretimi bir gece bakım ürünüdür. Zerdeçal kökü özütü, deniz kaynaklı balık kolajeni, skualan, trehaloz, Japon pirinç kepeği suyu ve E vitamini gibi bileşenler içerir. Gece yatmadan önce uygulanır ve durulama gerektirmez. Cildin nemini desteklemeye, kuruluk hissini azaltmaya ve sabah daha yumuşak, pürüzsüz bir cilt görünümü sağlamaya yardımcı olur. Net miktar: 50 g.'
       }
     };
 
